@@ -1,5 +1,7 @@
 <script>
 	import {calculateMagic} from './day1logic';
+
+	const results = calculateMagic();
 </script>
 
 <svelte:head>
@@ -8,5 +10,6 @@
 </svelte:head>
 
 <div class="day-wrapper">
-	Solution day 1: {calculateMagic()}
+	Solution day 1/1: {results.maxCalories}
+	Solution day 1/2: {results.topThree}
 </div>
