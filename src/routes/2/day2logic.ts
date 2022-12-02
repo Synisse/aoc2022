@@ -35,7 +35,7 @@ const mapWinCondition = (aGameResultValue: string): number => {
         case 'Z':
             return RoundScores.WIN;
         default:
-            return 99;
+            throw Error('Invalid hand');
     }
 }
 
@@ -87,7 +87,7 @@ const mapToGameValue = (aHand: string): number => {
         case 'Z':
             return SignScores.SCISSORS;
         default:
-            return 99;
+            throw Error('Invalid hand');
     }
 }
 
