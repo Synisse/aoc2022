@@ -3,15 +3,7 @@ import {chunk, flatten, intersection, map, sum} from 'lodash';
 import {readData} from '../../lib/parser/parser';
 
 const valueData = (aListOfLetters: string[]) => {
-    return map(aListOfLetters, aValue => {
-        let stringValue = aValue.toLowerCase().charCodeAt(0) - 96;
-
-        if(aValue === aValue.toUpperCase()) {
-            stringValue += 26;
-        }
-
-        return stringValue;
-    });
+    return map(aListOfLetters, aValue => aValue === aValue.toUpperCase() ? aValue.toLowerCase().charCodeAt(0) - 70 : aValue.toLowerCase().charCodeAt(0) - 96);
 }
 
 export const calculateMagic = () => {
